@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e7e3df">
+<meta name="description" content="HOSEN TWO EIGHT 完整 32 页画册 · 中轴翻页">
+<title>HOSEN TWO EIGHT · 中轴翻页画册</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="reader">
+<header><div><span class="brand">HOSEN TWO EIGHT</span><span class="edition"> &nbsp; / &nbsp; COLLECTION 2026</span></div><div class="tools"><a class="tool download" id="downloadPdfButton" href="downloads/HOSEN_TWO_EIGHT_Catalog_2026.pdf" download="HOSEN_TWO_EIGHT_Catalog_2026.pdf" aria-label="下载完整 PDF 画册（32 页，约 5.2 MB）" title="下载完整画册 · 32 页 · 约 5.2 MB">下载 PDF</a><button class="tool" id="contentsButton">目录</button><button class="tool" id="zoomButton">放大</button><button class="tool" id="fullscreenButton">全屏</button></div></header>
+<section class="stage" aria-label="画册阅读区">
+<div class="book" id="book" aria-label="HOSEN TWO EIGHT 画册">
+<img class="original" id="original" alt="HOSEN TWO EIGHT 画册第 1 页" draggable="false">
+<div class="half left static-left turn-layer" aria-hidden="true"><img id="staticLeft" alt=""></div>
+<div class="half right static-right turn-layer" aria-hidden="true"><img id="staticRight" alt=""></div>
+<div class="page-shadow turn-layer" id="pageShadow" aria-hidden="true"></div>
+<canvas class="paper-canvas turn-layer" id="paperCanvas" aria-hidden="true"></canvas>
+<div class="spine" aria-hidden="true"></div>
+<button class="zone left" id="leftZone" aria-label="上一页"></button><button class="zone right" id="rightZone" aria-label="下一页"></button>
+</div>
+</section>
+<footer><div class="navigation"><button class="arrow" id="prevButton" aria-label="上一页">‹</button><label class="counter"><input id="pageInput" type="number" min="1" max="32" value="1" aria-label="跳转页码"><span>/ 32</span></label><button class="arrow" id="nextButton" aria-label="下一页">›</button></div><p class="hint" id="hint">点击左右页面或拖动翻页 · 键盘 ← → · 双击画面放大</p></footer>
+<div class="status" id="status" role="status" aria-live="polite"></div>
+</main>
+<dialog id="contentsDialog" aria-labelledby="contentsTitle"><div class="dialog-head"><span class="dialog-title" id="contentsTitle">全部页面 · 32 页</span><button class="close" data-close="contentsDialog" aria-label="关闭目录">×</button></div><div class="thumbs" id="thumbs"></div></dialog>
+<dialog id="zoomDialog" aria-labelledby="zoomTitle"><div class="dialog-head"><span class="dialog-title" id="zoomTitle">画面细节<span class="zoom-note">放大后可滚动查看</span></span><div class="zoom-controls"><button class="tool" id="zoomOut" aria-label="缩小">−</button><span class="zoom-count" id="zoomCount">100%</span><button class="tool" id="zoomIn" aria-label="放大">＋</button><button class="close" data-close="zoomDialog" aria-label="关闭放大">×</button></div></div><div class="zoom-body" id="zoomBody"><img id="zoomImage" alt="当前画册页面的放大视图" draggable="false"></div></dialog>
+<script src="paper-turn.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
